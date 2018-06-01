@@ -1,3 +1,4 @@
-# Bootstrap Typescript
+# Typescript/ Webpack mono repo idea
 
-Bootstrap a Typescript project
+Example of using Webpack & Typescript to manage aliases within a mono repo. 
+
