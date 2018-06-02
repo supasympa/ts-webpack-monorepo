@@ -53,7 +53,8 @@
     "baseUrl": "src",
     "paths": {
       "@foo/bar/*": ["bar/*"],
-      "@foo/baz/*": ["baz/*"]
+      "@foo/baz/*": ["baz/*"],
+      "@foo/test-support/*": ["test-support/*"]
     }
   }
 }

@@ -1,0 +1,3 @@
+{
+  "test": "mocha --opts ../../../mocha.opts ./test/**/*.spec.ts"
+}
