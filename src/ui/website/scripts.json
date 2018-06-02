@@ -1,3 +1,4 @@
 {
-  "test": "mocha --opts ../../../mocha.opts ./test/**/*.spec.ts"
+  "test": "mocha --opts ../../../mocha.opts ./test/**/*.spec.ts",
+  "validate": "tslint -c ../../../tslint.json ./src/**/*.ts"
 }
