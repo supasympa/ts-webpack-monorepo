@@ -1,7 +1,7 @@
 {
-  "name": "bootstrap-ts",
+  "name": "ts-mono-repo",
   "version": "1.0.0",
-  "description": "Bootstrap a Typescript project",
+  "description": "Webpack plus Typescript mono repos (without Lerna)",
   "main": "index.js",
   "scripts": {
     "test": "mocha --opts ./mocha.opts ./src/ui/website/test/**/*.spec.ts",
@@ -19,30 +19,36 @@
   "author": "Lewis Barclay",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@types/chai": "^4.1.3",
-    "@types/chai-as-promised": "^7.1.0",
-    "@types/mocha": "^5.2.1",
+    "@types/chai": "4.1.3",
+    "@types/chai-as-promised": "7.1.0",
+    "@types/mocha": "5.2.1",
     "@types/nock": "9.1.3",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
+    "awesome-typescript-loader": "5.0.0",
+    "babel-core": "6.26.3",
+    "babel-loader": "7.1.4",
+    "babel-preset-env": "1.6.1",
     "chai": "4.1.2",
     "chai-as-promised": "7.1.1",
+    "html-webpack-plugin": "3.2.0",
+    "mocha": "5.2.0",
+    "nock": "9.3.0",
     "shelljs": "0.7.8",
     "ts-node": "6.0.5",
     "tsconfig-paths": "3.3.2",
+    "tsconfig-paths-webpack-plugin": "3.1.3",
     "tslint": "5.5.0",
     "typescript": "2.9.1",
-    "uglifyjs-webpack-plugin": "^1.2.5",
-    "webpack": "^4.10.2",
-    "webpack-cli": "^2.1.5"
+    "uglifyjs-webpack-plugin": "1.2.5",
+    "webpack": "4.10.2",
+    "webpack-cli": "2.1.5"
   },
   "dependencies": {
-    "axios": "0.18.0",
-    "mocha": "5.2.0",
-    "nock": "9.3.0"
+    "axios": "0.18.0"
   },
   "bin": {
-    "run-script": "./scripts/run-script/run-script.js"
+    "run-script": "./scripts/run-script/run-script.js",
+    "mocha": "./node_modules/.bin/mocha",
+    "tslint": "./node_modules/.bin/tslint",
+    "webpack": "./node_modules/.bin/webpack"
   }
 }

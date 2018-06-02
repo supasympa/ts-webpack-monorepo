@@ -10,5 +10,4 @@ export class HelloWorldClient {
     public hello(): Promise<any> {
         return this.http.get('/hello');
     }
-
 }

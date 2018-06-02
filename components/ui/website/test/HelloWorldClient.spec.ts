@@ -1,4 +1,4 @@
-import {expect} from '@foo/test-support/index';
+import {expect} from '@foo/test-support';
 import * as nock from 'nock';
 import { HelloWorldClient } from '../src/HelloWorldClient';
 

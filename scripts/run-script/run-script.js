@@ -8,8 +8,8 @@ if(!process.argv[2]){
   process.exit(1);
 }
 console.log(__dirname)
-const scriptName = path.resolve(__dirname,`../../`) + `/node_modules/.bin/${scriptJson[process.argv[2]]}`;
-console.log(`trying to execute script ${scriptName}`);
+const script = `${scriptJson[process.argv[2]]}`;
+console.log(`trying to execute script ${script}`);
 
-shell.exec(scriptName)
+shell.exec(script)
 
