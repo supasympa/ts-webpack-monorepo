@@ -52,7 +52,9 @@
     "moduleResolution": "node",
     "baseUrl": "components",
     "paths": {
-      "@foo/test-support": ["test-support/index"]
+      "@foo/test-support": ["test-support/index"],
+      "@foo/domain": ["domain/index"],
+      "@foo/hello-world-service": ["services/hello-world-service/index"]
     }
   }
 }

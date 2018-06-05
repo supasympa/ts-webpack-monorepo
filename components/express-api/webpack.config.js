@@ -1,12 +1,11 @@
 const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-const {CheckerPlugin} = require('awesome-typescript-loader')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CheckerPlugin } = require('awesome-typescript-loader');
 
 module.exports = {
     devtool: 'sourcemap',
-    target: 'web',
+    target: 'node',
     module: {
         rules: [
             {
@@ -21,27 +20,30 @@ module.exports = {
         ]
     },
 
-    resolve: {
+    resolve:{
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
-        plugins: [new TsconfigPathsPlugin({configFile: "./tsconfig.json"})]
+        plugins:[new TsconfigPathsPlugin({ configFile: "./tsconfig.json" })]
     },
 
     plugins: [
         new CheckerPlugin(),
-        // new UglifyJSPlugin(),
-        new HtmlWebpackPlugin({
-            template: './src/index.html'
-        })
+        // new UglifyJSPlugin()
     ],
 
-    entry: './src/index.ts',
+    entry: './server.ts',
 
     output: {
         filename: 'index.js',
         chunkFilename: 'index.js',
-        path: path.resolve(__dirname, '../../../dist/ui/website')
+        path: path.resolve(__dirname, '../../dist/express-api')
     },
 
-    // mode: 'production'
-    mode: 'development'
+    // mode: 'production',
+    mode: 'development',
+
+    // externals: ['express'],
+    // node:{
+    //     fs: 'empty',
+    //     net: 'empty'
+    // }
 };

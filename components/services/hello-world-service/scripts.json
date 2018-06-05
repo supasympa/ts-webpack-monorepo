@@ -1,5 +1,5 @@
 {
-  "echo": "echo 'ui website component'",
+  "echo": "echo 'hello-world service'",
   "test": "mocha --opts ../../../mocha.opts ./test/**/*.spec.ts",
   "validate": "tslint -c ../../../tslint.json ./src/**/*.ts",
   "build": "webpack"

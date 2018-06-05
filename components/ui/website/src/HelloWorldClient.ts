@@ -1,3 +1,4 @@
+import {Person} from '@foo/domain';
 import axios, {AxiosInstance} from 'axios';
 
 export class HelloWorldClient {
@@ -7,7 +8,7 @@ export class HelloWorldClient {
         this.http = axios.create(opts);
     }
 
-    public hello(): Promise<any> {
-        return this.http.get('/hello');
+    public hello(person: Person): Promise<any> {
+        return this.http.post('/hello', person);
     }
 }
